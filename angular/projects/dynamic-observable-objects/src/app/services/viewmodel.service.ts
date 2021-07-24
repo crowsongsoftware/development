@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { userViewModel } from '../view-models/user.viewmodel';
-import { users } from '../data/users';
+import { users } from '../components/user/data/users';
 import { of } from 'rxjs';
 import { userInfo } from 'os';
 

@@ -1,4 +1,4 @@
-import { userViewModel } from "../view-models/user.viewmodel";
+import { userViewModel } from "../../../view-models/user.viewmodel";
 
 export const users: Array<userViewModel> = [
     { 
