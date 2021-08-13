@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RecipeService } from '../recipe.service';
+import { ListState } from '../recipe.state';
 
 @Component({
   selector: 'app-recipe-list',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recipe-list.component.scss']
 })
 export class RecipeListComponent implements OnInit {
+  recipes: Array<ListState> = [];
 
-  constructor() { }
+  constructor(private recipeService: RecipeService) {
+    this.recipes = this.recipeService.List;
+   };
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { 
+    console.log("recipes: ", this.recipes);
+  };
+};
 
-}

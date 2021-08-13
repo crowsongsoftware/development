@@ -1,1 +1,13 @@
-<p>recipe-list works!</p>
+<section>
+    <table class="recipe-list">
+        <thead></thead>
+        <tfoot></tfoot>
+        <tbody>
+            <tr *ngFor="let recipe of recipes">
+                <td ><img class="recipe-item" src="{{recipe.image}}"></td>
+                <td class="recipe-item">{{recipe.title}}</td>
+                <td class="recipe-item"><a [routerLink]="['//', {outlets: {detail: 'breakfast/' + recipe.id}}]">Details</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
