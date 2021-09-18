@@ -1,5 +1,6 @@
 /*=======================
-        Recipe State
+        
+   *** Recipe State ***
   =======================
 */
 
@@ -19,11 +20,15 @@ export const enum Category{
     "legumes"
 };
 
-/*========================
-      State Interfaces
-  ========================*/
+/*=====================================================
+      View State Interfaces
+        - List View
+        - Detail View
+
+      TODO: Change names to above, ...ViewModels??
+  =====================================================*/
 export interface ListState {
-    category: Array<string>;
+    categories: Array<string>;
     id: string;
     image: string;
     title: string;
@@ -47,17 +52,37 @@ export type RecipeState = Array<DetailState>;
            State 
   ========================
 */
-export const undefinedState: RecipeState = [
-
+export const emptyState: RecipeState = [
+    {
+        categories: [],
+        description: "",
+        directions: [],
+        id: "",
+        image: "",
+        ingredients: [],
+        nutritionInformation: [],
+        summary: [],
+        title: ""
+    }
 ];
 
 export const defaultState: RecipeState = [
-
+    {
+        categories: [],
+        description: "",
+        directions: [],
+        id: "",
+        image: "",
+        ingredients: [],
+        nutritionInformation: [],
+        summary: [],
+        title: ""
+    }
 ];
 
 export const testState: RecipeState = [
     {
-        category: [
+        categories: [
             "Breakfast"
         ],
         description: "Placeholder for Recipe Description",
@@ -86,7 +111,7 @@ export const testState: RecipeState = [
         title: "Southwest Tofu Scramble"
     },
     {
-        category: [
+        categories: [
             "lunch",
             "Main Dish"
         ],
@@ -97,7 +122,7 @@ export const testState: RecipeState = [
             "Direction three...thirdly, do this and that",
             "Direction four...lastly do that and then this"],
         id: "2",
-        image: "assets/images/southwest_tofu_scramble.jpg",
+        image: "assets/images/southwest_tofu_scramble_2.jpg",
         ingredients: [
             "1 cup of this",
             "2 tbs of that",
@@ -116,7 +141,7 @@ export const testState: RecipeState = [
         title: "Baked Tofu Steaks"
     },
     {
-        category: [
+        categories: [
             "lunch",
             "Main Dish"
         ],
@@ -127,7 +152,7 @@ export const testState: RecipeState = [
             "Direction three...thirdly, do this and that",
             "Direction four...lastly do that and then this"],
         id: "3",
-        image: "assets/images/southwest_tofu_scramble.jpg",
+        image: "assets/images/southwest_tofu_scramble_3.jpg",
         ingredients: [
             "1 cup of this",
             "2 tbs of that",
@@ -143,13 +168,13 @@ export const testState: RecipeState = [
         summary: [
             "Excellent for quick lunches, bake and refrigerate"
         ],
-        title: "Baked Tofu Steaks"
+        title: "Baked Beans"
     }
 ];
 
 export const recipeState: RecipeState = [
     {
-        category: [
+        categories: [
             "Breakfast"
         ],
         description: "Placeholder for Recipe Description",
@@ -159,7 +184,7 @@ export const recipeState: RecipeState = [
             "Direction three...thirdly, do this and that",
             "Direction four...lastly do that and then this"],
         id: "1",
-        image: "assets/images/southwest_tofu_scramble.jpg",
+        image: "assets/images/southwest_tofu_scramble_1.jpg",
         ingredients: [
             "1 cup of this",
             "2 tbs of that",
@@ -178,8 +203,8 @@ export const recipeState: RecipeState = [
         title: "Southwest Tofu Scramble"
     },
     {
-        category: [
-            "lunch",
+        categories: [
+            "Lunch",
             "Main Dish"
         ],
         description: "Placeholder for Recipe Description",
@@ -189,7 +214,7 @@ export const recipeState: RecipeState = [
             "Direction three...thirdly, do this and that",
             "Direction four...lastly do that and then this"],
         id: "2",
-        image: "assets/images/southwest_tofu_scramble.jpg",
+        image: "assets/images/southwest_tofu_scramble_2.jpg",
         ingredients: [
             "1 cup of this",
             "2 tbs of that",
@@ -208,9 +233,9 @@ export const recipeState: RecipeState = [
         title: "Baked Tofu Steaks"
     },
     {
-        category: [
-            "lunch",
-            "Main Dish"
+        categories: [
+            "Breakfast",
+            "Lunch"
         ],
         description: "Placeholder for Recipe Description",
         directions: [
@@ -219,7 +244,7 @@ export const recipeState: RecipeState = [
             "Direction three...thirdly, do this and that",
             "Direction four...lastly do that and then this"],
         id: "3",
-        image: "assets/images/southwest_tofu_scramble.jpg",
+        image: "assets/images/southwest_tofu_scramble_3.jpg",
         ingredients: [
             "1 cup of this",
             "2 tbs of that",
@@ -235,6 +260,6 @@ export const recipeState: RecipeState = [
         summary: [
             "Excellent for quick lunches, bake and refrigerate"
         ],
-        title: "Baked Tofu Steaks"
+        title: "Baked Beans"
     }
 ];

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, UrlSegment } from '@angular/router';
 import { AppService } from './app.service';
 
 @Component({
@@ -10,13 +9,12 @@ import { AppService } from './app.service';
 export class AppComponent {
   public title = 'recipe';
 
-  constructor(private appService: AppService, private activatedRoute: ActivatedRoute){
+  constructor(private appService: AppService){
     this.title = this.appService.State.title;
   };
 
   ngOnInit(){
     console.log("AppComponent");
-    console.log('activatedRoute: ', this.activatedRoute);
     console.log("title: ", this.title);
   }
 };

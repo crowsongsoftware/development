@@ -1,0 +1,14 @@
+.grid-container{
+    background-color: red;
+    border: 2px solid red;
+    display: grid;
+    grid-template-columns:  30% 70%;
+};
+
+.list{
+    background-color: gray;
+}
+
+.detail{
+    background-color: lightblue;
+}

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { SearchBarModule } from '../search-bar/search-bar.module';
 import { RecipeComponent } from './recipe.component';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
@@ -16,7 +17,8 @@ import { RecipeStore } from './recipe.store';
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(recipeRoutes)
+    RouterModule.forChild(recipeRoutes),
+    SearchBarModule
   ],
   providers:[
     RecipeService,

@@ -8,7 +8,7 @@ import { ListState } from '../recipe.state';
   styleUrls: ['./recipe-list.component.scss']
 })
 export class RecipeListComponent implements OnInit {
-  recipes: Array<ListState> = [];
+  recipes: Array<ListState>;
 
   constructor(private recipeService: RecipeService) {
     this.recipes = this.recipeService.List;

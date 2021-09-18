@@ -265,7 +265,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "projects/recipe/src/favicon.ico",
-              "projects/recipe/src/assets"
+              "projects/recipe/src/assets",
+              "projects/recipe/src/app-config.json"
             ],
             "styles": [
               "projects/recipe/src/styles.scss"

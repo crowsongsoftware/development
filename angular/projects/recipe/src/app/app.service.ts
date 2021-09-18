@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Title } from '@angular/platform-browser';
 import { AppStore } from './app.store';
 import { AppState, appState } from './app.state';
 
@@ -9,12 +9,19 @@ export class AppService {
     return this._appStore.State;
   };
 
-  
   public set State(app){
     this._appStore.State = app;
   };
-  
-  constructor(private _appStore: AppStore, private _http: HttpClient) { 
-    this._appStore.State = appState;
+
+ set Title(title: string){
+    this._titleService.setTitle(title);
   };
+
+  get title(): string{
+    return this._titleService.getTitle();
+  }
+  
+  constructor(private _titleService: Title, private _appStore: AppStore) {
+    this.Title = this.State.title;
+   };
 };

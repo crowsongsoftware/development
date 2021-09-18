@@ -2,21 +2,15 @@ import { Injectable } from "@angular/core";
 import { RecipeStore } from "./recipe.store";
 import { DetailState, ListState } from "./recipe.state";
 
-//import { ActivatedRoute, Router, UrlSegment } from '@angular/router';
-//import { IVM_RecipeDetail, IVM_RecipeList } from "./recipe.viewmodel";
-//import recipeList from '../data/data.json';
-
 @Injectable()
 export class RecipeService{
-    constructor(private recipeStore: RecipeStore){
-        //this.recipeStore.State;
-    };
+    constructor(private recipeStore: RecipeStore){ };
 
     public get Detail(): DetailState | undefined{
         return this.recipeStore.Detail;
     };
 
-    public get List(): Array<ListState>{
+    public get List():Array<ListState>{
         return this.recipeStore.List;
     };
 };

@@ -1,11 +1,11 @@
 <section class="recipe-detail">
-    <p>recipe.title</p>
-    <img class="recipe-item" src="{{recipe.image}}">
+    <p>{{recipe.title}}</p>
+    <img class="recipe-item" src="recipe.image">
     <p>Description</p>
-    <p *forEach="let item in recipe.description">{{item}}</p></p>
+    <p>{{recipe.description}}</p>
     <p>Directions</p>
-    <p *forEach="let item in recipe.directions">{{item}}</p>
-    <p *forEach="let item in recipe.ingredients">{{item}}</p>
+    <p *ngFor="let item of recipe.directions">{{item}}</p>
+    <p *ngFor="let item of recipe.ingredients">{{item}}</p>
     <p>Nutrition Information</p>
-    <p *forEach="let item in recipe.nutritionInformation">{{item}}</p>
+    <p *ngFor="let item of recipe.nutritionInformation">{{item}}</p>
 </section>
